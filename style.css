@@ -1,137 +1,241 @@
-/*Overall body's configs*/
-body{
-    margin: 0%;
-    padding: 0%;
-    background-color: #1A1A1A;
+/*Background Configs*/
+body {
+  margin: 0;
+  padding: 10px;
+  background-image: url('images/Background.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: auto;
+  min-height: 100%;
+  position: relative;
 }
 
-nav {
+/*Background style*/
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 1;
+}
+
+/*navigation bar image*/
+.nav_img {
+    width: 80px;
+    border-radius: 100%;
+    box-shadow: 0px 5px 30px #000000;
+}
+
+/*Navigation bar Config*/
+.nav_bar {
+    background-color: rgba(55, 55, 55, 0.5);
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    background-color: #262626;
-    padding: 10px 50px;
-    margin: 15px;
-    border-radius: 40px;
+    align-items: center;
+    padding: 10px 20px;
+    padding-right: 100px;
+    border-radius: 70px;
+    box-shadow: 0px 5px 20px #000000;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-nav img {
-    width: 60px;
-    border-radius: 50%;
-    border: 2px solid #D4AF37;
-}
-
-nav a {
+/*Navigation bar links*/
+.nav_cntnt a {
+    background-color: rgba(255, 255, 255, 0.35);
+    border-radius: 70px;
+    box-shadow: 0px 5px 20px #000000;
+    padding: 5px 15px;
+    margin: 0px 25px;
+    color: #000000;
+    font-family: 'Tinos', serif;
+    font-size: 16px;
+    font-weight: 590;
     text-decoration: none;
-    color: white;
-    background-color: gray;
-    padding: 8px 18px;
-    margin: 0px 30px;
-    border-radius: 40px;
-    font-weight: 500;
-    transition: background 0.5s, color 0.5s;
 }
 
-nav a:hover {
-    cursor: pointer;
-    background-color: #D4AF37;
-    color: #1A1A1A;
+/*Hero section (Landing page)*/
+.hero_sec {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    padding-top: 110px;
+    margin: 0;
+    position: relative;
+    z-index: 2;
 }
 
-nav a:active {
-    background-color: #b9972f;
-    transform: scale(0.95);
+/*Hero section links*/
+.hero_sec a {
+    background-color: rgba(255, 255, 255, 0.35);
+    border-radius: 70px;
+    box-shadow: 0px 5px 20px #000000;
+    padding: 5px 15px;
+    margin: 10px 25px;
+    color: #000000;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 590;
+    text-decoration: none;
 }
 
-.hero {
+/*About Section config*/
+.about_sec {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 195px;
+    padding: 10px;
+    background-color: rgba(40,40,40,0.6);
+    border-radius: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+/*About section title*/
+.about_sec h2 {
+    text-align: center;
+    font-size: 32px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+/*Images' configs in about section*/
+.about_sec img {
+    width: 600px;
+    height: 350px;
+    border-radius: 20px;
+    border: solid 2px #BFA76F;
+}
+
+/*About the farm*/
+.first {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 90px 100px;
+    padding-right: 40px;
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    color: #FFFFFF;
 }
 
-.hero-text {
-    color: #F2F2F2;
-    font-size: 30px;
-    margin-left: 75px;
+/*About the oil*/
+.second {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 80px;
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    color: #FFFFFF;
 }
 
-.hero-pic img {
-    width: 280px;
-    margin-right: 75px;
-    border-radius: 35px;
-    border: 2px solid #D4AF37;
+/*Producst section title*/
+.products_sec h2 {
+    text-align: center;
+    font-size: 32px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    color: #ffffff;
 }
 
+/*Products sections configs*/
+.products_sec {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 195px;
+    margin-bottom: 100px;
+    padding: 40px 20px;
+    background-color: rgba(40,40,40,0.6);
+    border-radius: 10px;
+    position: relative;
+    z-index: 2;
+}
 
-
-@media (max-width: 430px) 
-{
-  nav {
+/*Configs of jojoba product*/
+.joj_oil {
+    background-color: #F5F3EE;
+    color:#3B3A36;
+    width: 300px;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    background-color: #262626;
-    padding: 10px 25px;
-    margin: 7.5px;
-    border-radius: 55px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    text-align: center;
+    padding: 25px 20px;
 }
 
-nav img {
-    width: 40px;
-    border-radius: 50%;
-    margin-bottom: 13px;
-    border: 2px solid #D4AF37;
+/*Image's configs for jojoba product*/
+.joj_oil img {
+    width: 160px;
+    border-radius: 12px;
+    border: solid 2px #BFA76F;
 }
 
-nav a {
-    text-decoration: none;
-    color: white;
-    background-color: gray;
-    padding: 4px 5px;
-    margin: 0px 10px;
-    border-radius: 40px;
-    font-weight: 500;
-    transition: background 0.5s, color 0.5s;
+/* Product title */
+.joj_oil h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #3B3A36;
 }
 
-nav a:hover {
-    cursor: pointer;
-    background-color: #D4AF37;
-    color: #1A1A1A;
+/* Product description */
+.joj_oil p {
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 20px;
 }
 
-nav a:active {
-    background-color: #b9972f;
-    transform: scale(0.95);
+/* Buy now button */
+.joj_oil button {
+  background-color: #806D5A;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
 }
 
-.hero {
+.footer{
+    background-color: rgb(40,40,40);
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    margin: 45px 50px;
+    justify-content: center;
+    padding: 10px;
+    padding-bottom: 100px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    position: relative;
+    z-index: 2;
 }
 
-.hero-text {
-    color: #F2F2F2;
-    font-size: 13.5px;
-    margin-left: 37px;
+.footer div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.hero-pic img {
-    width: 170px;
-    height: 200px;
-    margin-left: 100px;
-    border-radius: 35px;
-    border: 2px solid #D4AF37;
-}
+.footer a {
+    text-decoration: none;
+    color: #FFFFFF;
 }
