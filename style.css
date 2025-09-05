@@ -1,440 +1,74 @@
-/* ===================================
-   🔧 Base Styles & Resets
-=================================== */
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 100px;
-}
+/*Main configs*/
 
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-
-/* ===================================
-   🖼️ Background & Overlay
-=================================== */
-/*Background Configs*/
 body {
-    margin: 0;
-    padding: 10px;
-    background-image: url('images/Background.jpg');
+    background-image: url(images/bg.png);
+    background-color: rgba(0,0,0,0.5);
+    background-blend-mode: darken;
+    background-position: center;
     background-repeat: no-repeat;
-    background-position: center center;
     background-size: cover;
     background-attachment: fixed;
-    height: auto;
-    min-height: 100%;
-    position: relative;
-}
-
-/*Background style*/
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    padding: 0;
+    margin: 0;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.75);
-    z-index: 1;
+    color: white;
 }
 
+/*-----------------------------------------------*/
 
-/* ===================================
-   🧭 Navigation Bar
-=================================== */
-/*navigation bar image*/
-.nav_img {
-    width: 80px;
-    border-radius: 100%;
-    box-shadow: 0px 5px 30px #000000;
-}
+/*Navigation-bar configs*/
 
-/*Navigation bar Config*/
-.nav_bar {
-    background-color: rgba(55, 55, 55, 0.5);
+.navbar {
+    background-color: black;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    padding-right: 100px;
-    border-radius: 70px;
-    box-shadow: 0px 5px 20px #000000;
+    justify-content: space-between;
+    padding: 10px 50px;
     position: sticky;
     top: 0;
-    z-index: 1000;
+    box-shadow: 0 5px 20px rgb(0,0,0);
 }
 
-/*Navigation bar links*/
-.nav_cntnt a {
-    background-color: rgba(255, 255, 255, 0.35);
-    border-radius: 70px;
-    box-shadow: 0px 5px 20px #000000;
-    padding: 5px 15px;
-    margin: 0px 25px;
-    color: #000000;
-    font-family: 'Tinos', serif;
-    font-size: 16px;
-    font-weight: 590;
-    text-decoration: none;
-}
-
-
-/* ===================================
-   🏠 Hero Section (Landing Page)
-=================================== */
-.hero_sec {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #FFFFFF;
-    font-family: 'Playfair Display', serif;
-    font-size: 28px;
-    padding-top: 110px;
-    margin: 0;
-    position: relative;
-    z-index: 2;
-}
-
-/*Hero section links*/
-.hero_sec a {
-    background-color: rgba(255, 255, 255, 0.35);
-    border-radius: 70px;
-    box-shadow: 0px 5px 20px #000000;
-    padding: 5px 15px;
-    margin: 10px 25px;
-    color: #000000;
-    font-family: 'Playfair Display', serif;
-    font-size: 20px;
-    font-weight: 590;
-    text-decoration: none;
-}
-
-
-/* ===================================
-   👤 About Section
-=================================== */
-/*About Section config*/
-.about_sec {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 195px;
-    padding: 10px;
-    background-color: rgba(40,40,40,0.6);
-    border-radius: 10px;
-    position: relative;
-    z-index: 2;
-}
-
-/*About section title*/
-.about_sec h2 {
-    text-align: center;
-    font-size: 32px;
-    font-family: 'Playfair Display', serif;
-    font-weight: 600;
-    margin-bottom: 30px;
-    letter-spacing: 1px;
-    color: #ffffff;
-}
-
-/*Images' configs in about section*/
-.about_sec img {
-    width: 600px;
-    height: 350px;
-    border-radius: 20px;
-    border: solid 2px #BFA76F;
-}
-
-/*About the farm*/
-.first {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-right: 40px;
-    font-family: 'Lora', serif;
-    font-size: 18px;
-    color: #FFFFFF;
-}
-
-/*About the oil*/
-.second {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: space-between;
-    padding-left: 80px;
-    font-family: 'Lora', serif;
-    font-size: 18px;
-    color: #FFFFFF;
-}
-
-
-/* ===================================
-   🛍️ Products Section
-=================================== */
-/*Producst section title*/
-.products_sec h2 {
-    text-align: center;
-    font-size: 32px;
-    font-family: 'Playfair Display', serif;
-    font-weight: 600;
-    margin-bottom: 30px;
-    letter-spacing: 1px;
-    color: #ffffff;
-}
-
-/*Products sections configs*/
-.products_sec {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 40px;
-    margin-top: 195px;
-    margin-bottom: 100px;
-    padding: 40px 20px;
-    background-color: rgba(40,40,40,0.6);
-    border-radius: 10px;
-    position: relative;
-    z-index: 2;
-}
-
-/*Configs of jojoba product*/
-.joj_oil {
-    background-color: #F5F3EE;
-    color:#3B3A36;
-    width: 300px;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 25px 20px;
-}
-
-/*Image's configs for jojoba product*/
-.joj_oil img {
-    width: 160px;
-    border-radius: 12px;
-    border: solid 2px #BFA76F;
-}
-
-/*Product title*/
-.joj_oil h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: #3B3A36;
-}
-
-/*Product description*/
-.joj_oil p {
-    font-size: 15px;
-    line-height: 1.5;
-    margin-bottom: 20px;
-}
-
-/*Buy now button*/
-.joj_oil button {
-    background-color: #806D5A;
+.navbar a {
     color: white;
-    border: none;
-    padding: 10px 25px;
-    border-radius: 30px;
-    font-size: 14px;
-    font-family: 'Poppins', sans-serif;
-    cursor: pointer;
-}
-
-
-/* ===================================
-   📩 Footer Section
-=================================== */
-.footer {
-    background-color: rgb(40,40,40);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px;
-    padding-bottom: 100px;
-    padding-top: 100px;
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
-    position: relative;
-    z-index: 2;
-}
-
-.socials div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
     text-decoration: none;
-    color: #FFFFFF;
-}
-
-.footer a {
-    text-decoration: none;
-    color: #FFFFFF;
-}
-
-.footimg {
-    width: 80px;
-    border-radius: 100%;
-    border: solid 2px #BFA76F;
-}
-
-.footer .socials img {
-    width: 50px;
-}
-
-.cpyright {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #FFFFFF;
-}
-
-/* ===================================
-   ✨ Animations & Effects
-=================================== */
-
-
-/* ===================================
-   📱 iPhone 15 Portrait (Responsive Design Start)
-=================================== */
-
-@media (max-width: 430px) {
-
-  /* -------------------------------
-     🔧 Base & HTML Adjustments
-  --------------------------------- */
-  html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 110px;
-  }
-
-  body {
-    padding: 5px;
-  }
-
-  /* -------------------------------
-     🧭 Navigation Bar
-  --------------------------------- */
-  .nav_bar {
-    flex-direction: column;
-    padding: 10px;
-    padding-right: 10px;
-    gap: 10px;
-  }
-
-  .nav_cntnt a {
-    margin: 5px 10px;
-    font-size: 14px;
+    margin-right: 100px;
+    border: 1px solid rgba(255, 0, 0, 0.5);
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
     padding: 5px 10px;
-  }
-
-  .nav_img {
-    width: 60px;
-  }
-
-  /* -------------------------------
-     🏠 Hero Section
-  --------------------------------- */
-  .hero_sec {
-    font-size: 22px;
-    padding-top: 235px;
-    text-align: center;
-    margin-bottom: 460px;
-  }
-
-  .hero_sec a {
-    font-size: 16px;
-    margin: 5px 10px;
-  }
-
-  /* -------------------------------
-     👤 About Section
-  --------------------------------- */
-  .about_sec {
-    margin-top: 120px;
-    padding: 10px;
-  }
-
-  .about_sec h2 {
-    font-size: 24px;
-  }
-
-  .about_sec img {
-    width: 100%;
-    height: auto;
-  }
-
-  .first,
-  .second {
-    flex-direction: column;
-    padding: 0;
-    text-align: center;
-    gap: 15px;
-  }
-
-  /* -------------------------------
-     🛍️ Products Section
-  --------------------------------- */
-  .products_sec {
-    margin-top: 100px;
-    gap: 20px;
-  }
-
-  .products_sec h2 {
-    font-size: 24px;
-  }
-
-  .joj_oil {
-    width: 90%;
-    padding: 15px;
-  }
-
-  .joj_oil img {
-    width: 120px;
-  }
-
-  .joj_oil h3 {
-    font-size: 18px;
-  }
-
-  .joj_oil p {
-    font-size: 14px;
-  }
-
-  .joj_oil button {
-    padding: 8px 20px;
-    font-size: 13px;
-  }
-
-  /* -------------------------------
-     📩 Footer Section
-  --------------------------------- */
-  .footer {
-    flex-direction: column;
-    gap: 20px;
-    padding: 30px 10px;
-    padding-bottom: 60px;
-  }
-
-  .footer .socials img {
-    width: 35px;
-  }
-
-  .footimg {
-    width: 60px;
-  }
-
-  .cpyright {
-    font-size: 12px;
-  }
-
 }
+
+.navbar img {
+    border-radius: 100%;
+    width: 55px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+}
+
+/*-----------------------------------------------*/
+
+/*Hero section configs*/
+
+.hero {
+    font-family: 'creepster', cursive;
+    text-shadow: 0 0 10px white;
+    font-size: 50px;
+    text-align: center;
+    margin: 220px 0;
+}
+
+/*-----------------------------------------------*/
+
+/*-----------------------------------------------*/
+
+/*-----------------------------------------------*/
+
+/*-----------------------------------------------*/
+
+/*-----------------------------------------------*/
+
+/*-----------------------------------------------*/
+
+/*-----------------------------------------------*/
